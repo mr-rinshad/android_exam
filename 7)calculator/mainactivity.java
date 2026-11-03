@@ -152,13 +152,15 @@ public class MainActivity extends AppCompatActivity {
                 division = false;
             }
         });
-        // Decimal Button
-        buttonDot.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-               result.setText(".");
-            }
-        });
+// Decimal Button
+buttonDot.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        if (!result.getText().toString().contains(".")) {
+            result.setText(result.getText() + ".");
+        }
+    }
+});
         // Equal Button
         buttonEql.setOnClickListener(new View.OnClickListener() {
             @Override
