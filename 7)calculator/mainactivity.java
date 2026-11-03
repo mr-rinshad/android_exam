@@ -156,13 +156,7 @@ public class MainActivity extends AppCompatActivity {
         buttonDot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!result.getText().toString().contains(".")) {
-                    if (result.length() == 0) {
-                        result.setText("0.");
-                    } else {
-                        result.setText(result.getText() + ".");
-                    }
-                }
+               result.setText(".");
             }
         });
         // Equal Button
